@@ -1,9 +1,16 @@
 body {
-    background-color: red;
+    background-color: lightgrey;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
+
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    margin-top: -70px;
+    margin-left: -250px;
+}
+
+.input-group{
+    border-radius: 0;
 }

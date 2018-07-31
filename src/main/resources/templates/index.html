@@ -13,24 +13,29 @@
 <div class="container">
     <div class="card" style="width: 45%">
         <div class="card-body" >
+            <form action="/" method="post">
+
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="username">Username</span>
                 </div>
-                <input type="text" class="form-control"  aria-label="Username"
+
+                <input name="username" type="text" class="form-control"   aria-label="Username"
                        aria-describedby="basic-addon1"/>
+
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="password">Password</span>
+                    <span class="input-group-text"  id="password">Password</span>
                 </div>
-                <input type="text" class="form-control" aria-label="Username"
+                <input name="password" type="password" class="form-control" aria-label="Username"
                        aria-describedby="basic-addon1"/>
 
                 <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">Log in</button>
+                    <button class="btn btn-primary" type="submit">Log in</button>
                 </div>
             </div>
+            </form>
         </div>
     </div>
 </div>
