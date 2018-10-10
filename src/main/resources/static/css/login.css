@@ -1,37 +1,108 @@
 html {
+    background-color: #696969;
     margin: 0;
     padding: 0;
 }
 body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     margin: 0;
     padding: 0;
 }
-#wrapper {
-    margin-top: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-#container {
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-#form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-#button {
-    margin-top: 5%;
-}
-#failure {
+@media screen and (min-width:650px) {
+    h2 {
+        padding: 0;
+        margin: 0;
+    }
 
-    background-color: red;
-    width: 129%;
-    visibility: hidden;
+    #wrapper {
+        margin-top: 25%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #form {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #submit {
+        border: none;
+        margin-top: 1%;
+        width: 20%;
+    }
+
+    #wrongInfo {
+        margin-top: 1%;
+        visibility: hidden;
+        background-color: red;
+        padding: 1%;
+        border-radius: 4px;
+    }
+
+    #wrongInfo > p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .fields {
+        padding: 1%;
+        border: none;
+        border-radius: 2px;
+    }
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+@media screen and (max-width:649px) {
+
+    #wrapper {
+        margin-top: 10vh;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #form {
+        width: 75vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #submit {
+        border: none;
+        margin-top: 4vw;
+        width: 77vw;
+    }
+
+    #wrongInfo {
+        margin-top: 1vw;
+        visibility: hidden;
+        background-color: red;
+        padding: 1vw;
+        border-radius: 4px;
+    }
+
+    #wrongInfo > p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .fields {
+        width: 75vw;
+        padding: 1vw;
+        border: none;
+        border-radius: 2px;
+    }
 }
