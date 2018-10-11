@@ -1,17 +1,19 @@
 package com.budgetapp.budgetapp.Controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class IndexController {
+    private String getResponse() {
+        return response;
+    }
 
-    private String data = "";
+    private void setResponse(String response) {
+        this.response = response;
+    }
+
+    private String response = "deafult ryerytertertertyertyrtyerty";
 
     @GetMapping("/")
     public String hello() {return "index";}
@@ -24,10 +26,11 @@ public class IndexController {
             @RequestParam(name = "username") String username,
             @RequestParam(name= "password") String password
     ){
-        System.out.println("working");
+        setResponse("authenicate response set");
+        System.out.println("authenicate run test");
         System.out.println(username);
         System.out.println(password);
-        data = "very nice";
+
 
 //        if (username.equalsIgnoreCase("fuck") && password.equalsIgnoreCase("yes")){
 //            System.out.println("this worked");
@@ -35,11 +38,12 @@ public class IndexController {
 //
 //        }
     }
-    @GetMapping("/logincheck")
-    @ResponseBody
+    @ResponseBody()
+    @RequestMapping(value = "/logincheck", method = RequestMethod.GET, produces = "application/json")
     public String wrongPassword(){
-        return data;
-
+        System.out.println("wrongPassword run test");
+        System.out.println(getResponse());
+        System.out.println("-------------------------");
+        return getResponse();
     }
-
 }
