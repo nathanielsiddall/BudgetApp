@@ -11,7 +11,17 @@ const wrongInfo =id("wrongInfo");
 
 
 submit.onclick = ()=>{
-    //things to do when you click the submit
+    console.log("fired");
+    console.log(username.value);
+    fetch("/", {
+        method:"post",
+        body: `username=${username.value}&password=${password.value}`
+    }).then((response)=>{
+
+    });
+    // fetch("/logincheck").then((responses)=>{
+    //     wrongInfo.style.visibility ="visible";
+    // })
 };
 
 window.addEventListener('keyup', (e) =>{
